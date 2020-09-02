@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samtycke till bildhantering</title>
+    <style>
+        .removedots {
+            list-style-type: none;
+            padding-left: 0px;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            document.getElementById("goodwork").innerHTML = "<h1>You did... Good work.. Yay!</h1>";
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <img src="bilder/glimakra.jpg" alt="Glimåkras ikon" width="806" height="255">
+
+        <h1>Samtycke till bildhantering</h1>
+
+
+
+        <ul class="removedots">
+            <li>Glimåkra folkhögskola behöver ditt samtycke för att
+                <!--Ta bort skitpunktnen-->
+                <ol>
+                    <li>Hantera bilder för internt bruk<br>
+                        Dessa bilder är för dokumentation under året, för att personalen ska känna igen er, för att
+                        visas
+                        för andra som går på skolan på till exempel ett infofika och info-Tv. Skolan försöker minimera
+                        spridningen av dessa bilder och kommer inte publicera dem.
+                    </li>
+                    <li>Hantera bilder för externt bruk<br>
+                        Dessa bilder är för att publicera nyheter på vår hemsida och händelser i sociala medier. De kan
+                        även
+                        användas för tryckt annonsmaterial och liknande. Självklart försöker vi välja ut så bra bilder
+                        som
+                        möjligt och tar bort enskilda bilder som du inte tycker är okej.
+                    </li>
+                </ol>
+            </li>
+        </ul>
+
+        <p>I begreppet hantera ingår fotografering, lagring, redigering och användning av bilderna.
+            Bilderna tas av personal på Glimåkra folkhögskola och det är Glimåkra folkhögskola (org.nr: 838200-5950) som
+            är personuppgiftsansvarig. Läs mer om vår <a href="index.html">personuppgiftspolicy</a> här.
+        </p>
+        <p>Samtycket är giltigt tills vidare och bilderna lagras tills vidare. Du har rätt att när som helst ta tillbaka
+            ditt samtycke. Detta gör du genom att kontakta Johanna Sernulf på kontoret. Ob¬servera dock att ett
+            återkallande av ditt samtycke inte påverkar lagligheten av behandlingen innan samtycket återkallades. Du har
+            också rätt till att få fotona raderade.</p>
+
+<div id="goodwork">
+        <form action="tbh-html" method="POST">
+            <p>Samtycker du till att vi hanterar bilder föreställande dig?</p>
+            <!--fråga varför du inte kan använda separata name och id, även om for="" matchar en av dem!-->
+            <ul class="removedots">
+                <li><label for="interntbruk">Internt bruk</label></li>
+                <li><input type="radio" name="interntbruk" id="interntbruk" value="ja">Ja</li>
+                <li><input type="radio" name="interntbruk" id="interntbruk2" value="nej">Nej</li>
+            </ul>
+
+            <ul class="removedots">
+                <li><label for="externtbruk">Externt bruk</label></li>
+                <li><input type="radio" name="externtbruk" id="externtbruk" value="ja">Ja</li>
+                <li><input type="radio" name="externtbruk" id="externtbruk1" value="nej">Nej</li>
+            </ul>
+
+            <ul class="removedots">
+                <li><label for="fnamn">Ditt förnamn</label></li>
+                <li><input type="text" name="fnamn" id="fnamn" placeholder="Förnamn"></li>
+                <li><label for="lname">Ditt lösenord</label></li>
+                <li><input type="text" name="lname" id="lname" placeholder="Efternamn"></li>
+                <li><label for="person-num">Personnummer</label></li>
+                <li><input type="number" name="person-num" id="person-num" placeholder="Personnummer"></li>
+                <li><label for="epost">Din Epost</label></li>
+                <li><input type="email" name="epost" id="epost" placeholder="email@glimakra.se"></li>
+                <li><label for="klass">Klass</label></li>
+                <li><input type="text" name="klass" id="klass" maxlength="10"></li>
+            </ul>
+            <ul class="removedots">
+                <li><label for="lasar">För läsår (termin)</label></li>
+                <li><select name="lasar" id="lasar">
+                        <option value="vt20">Vårtermin 2020</option>
+                        <option value="ht20">Hösttermin 2020</option>
+                        <option value="vt21">Vårtermin 2021</option>
+                        <option value="ht22">Hösttermin 2021</option>
+                    </select></li>
+            </ul>
+
+            <ul class="removedots">
+                <li><label for="godkant">Jag har förstått vad jag går med på</label></li>
+                <li><input type="checkbox" name="godkant" id="godkant" required>Jag har förstått vad jag skrivit under
+                </li>
+            </ul>
+
+            <ul class="removedots">
+                <!--<li> <input type="submit" value="Skicka in">
+                    <input type="reset" value="Börja om"></li>-->
+            </ul>
+
+        </form>
+
+        <button onclick="myFunction()">Skicka in</button>
+
+    </div>
+        <!--<img src="bilder/larare.jpg" alt="larare" width="1289" height="859">-->
+     
+    </main>
+</body>
+
+</html>
